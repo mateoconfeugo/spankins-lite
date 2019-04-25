@@ -1,0 +1,14 @@
+* building
+#+BEGIN_SRC sh
+lein build
+#+END_SRC
+
+This will start the Figwheel compiler for ClojureScript.
+Once the sources are compiler, open a new terminal window and run the project with Node.js as follows:
+
+* running
+#+BEGIN_SRC sh
+node target/out/spankins-lite.js
+#+END_SRC
+
+Once the server starts, visit site at localhost:

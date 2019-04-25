@@ -1,0 +1,26 @@
+{
+ :deps {com.bhauman/figwheel-main {:mvn/version "0.1.7"}
+        com.bhauman/rebel-readline-cljs {:mvn/version "0.1.4"}
+        org.clojure/clojurescript {:mvn/version "1.10.439"}
+        org.clojure/clojure {:mvn/version "1.10.0"}
+        reagent {:mvn/version "0.8.1" :exclusions [[cljsjs/react]
+                                               [cljsjs/react-dom]
+                                                   [cljsjs/create-react-class]]}
+        re-frame {:mvn/version "0.10.6"}
+        denisidoro/quark {:mvn/version "0.6.0" :exclusions [cheshire] }
+        zprint {:mvn/version "0.4.13"}
+;;        juxt/mach {:git/url "https://github.com/juxt/mach" :sha "19ce5bf139508db73ca53b65a356eee391438d91"}
+        }
+ :paths ["src" "target" "resources"]
+ :aliases {:repl {:extra-deps
+                  {;; Figwheel ClojureScript REPL
+                   com.cemerick/piggieback {:mvn/version "0.2.2" :exclusions  [com.google.javascript/closure-compiler]}
+                   figwheel-sidecar        {:mvn/version "0.5.14":exclusions  [com.google.javascript/closure-compiler]}
+                   ;; CIDER compatible nREPL
+                   cider/cider-nrepl       {:mvn/version "0.15.1"}
+                   org.clojure/tools.nrepl {:mvn/version "0.2.12"}
+                   refactor-nrepl          {:mvn/version "2.3.1"}
+                   }
+                  }
+           }
+ }
